@@ -1,0 +1,25 @@
+{
+  "name": "ca-exchangeagregator",
+  "version": "1.0.0",
+  "description": "Microservice that aggregates crypto exchanges data and finds target indicator/prices",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"nodemon src/server.js\" \"nodemon src/aggregatePrices.js\" \"nodemon src/checkUserPriceAlerts.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "CA-ExchangeAggregator"
+  },
+  "author": "Rafael Arcieri",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.25",
+    "node-fetch": "^2.6.0",
+    "pubsub-js": "^1.8.0",
+    "request": "^2.88.2"
+  }
+}
